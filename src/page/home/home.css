@@ -1,3 +1,21 @@
 body{
   background-image: url("../../assets/space.jpg");
+ 
+}
+
+#titulo{
+  font-family: 'Press Start 2P', cursive;
+  
+}
+
+
+#img{
+  background: url("../../assets/universidadx.gif");
+  position: relative;
+  margin: 2%;
+  width: 800px;
+  height: 400px;
+  left:35%;
+  background-size: contain;
+  background-repeat: no-repeat;
 }
