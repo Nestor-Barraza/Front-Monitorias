@@ -3,7 +3,7 @@ import { Dropdown, Icon } from 'semantic-ui-react'
 
 
 
-const Selectmonitor = ({onChange, name}) => {
+const Selectmonitor = ({onChange, name, value, error}) => {
   const [monitores, setMonitores] = useState([]);
 
   const obtenerDatos = async () => {
@@ -29,7 +29,9 @@ const Selectmonitor = ({onChange, name}) => {
     <Dropdown
       placeholder='Seleciona un monitor'
       fluid
+      value={value}
       name={name}
+      error={error}
       onChange={onChange}
       selection
       options={MonitorOptions}

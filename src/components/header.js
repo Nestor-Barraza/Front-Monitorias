@@ -1,46 +1,24 @@
 import React from 'react'
-import { Header, Icon, Grid, Button } from 'semantic-ui-react'
-import {Link} from "react-router-dom";
+import { Header, Icon, Button, Menu } from 'semantic-ui-react'
+import { Link } from "react-router-dom";
 
-const Nav= () => (
-
-  <Header as='h2'>
-    <Icon name='chess rook icon' />
-    <Header.Content>
-       Universidad X
-      <Grid columns='four' divided floated='right'  >
-      <Grid.Column>
-      <Header.Subheader >Manejamos sus preferencias</Header.Subheader>
-      </Grid.Column>
-      <Grid.Column>
-                  <Link to="/"  > <Button content ='Home'/> </Link>
-                  </Grid.Column>
-      
-
-      <Grid.Column >
-        
- 
-                  
-                  <Link to="/monitores"  > <Button content ='Monitores'/>  </Link>
-                 
-
-                  
-                 
-
-        
-      </Grid.Column>
-
-                  <Grid.Column>
-                  <Link to="/monitorias" > <Button content ='Monitorías'/> </Link>
-                  </Grid.Column>
-                  </Grid>
-
-      </Header.Content>
-      <hr/>
-     
-    
-    
-  </Header>
-)
+const Nav = () => (
+    <Menu pointing>
+      <Menu.Item>
+        <Header as='h3'>
+          <Icon name='chess rook' />
+          <Header.Content>
+            Universidad X
+       <Header.Subheader >Manejamos sus preferencias</Header.Subheader>
+          </Header.Content>
+        </Header>
+      </Menu.Item>
+      <Menu.Item position="right">
+        <Link to="/"  > <Button size="mini" content='Home' /> </Link>
+        <Link to="/monitores"  > <Button size="mini" content='Monitores' />  </Link>
+        <Link to="/monitorias" > <Button size="mini" content='Monitorías' /> </Link>
+      </Menu.Item>
+    </Menu>
+);
 
 export default Nav
